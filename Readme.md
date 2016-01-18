@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Olya Chetverikova](https://htmlacademy.ru/profile/id136685).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Гостюхин] (https://htmlacademy.ru/profile/id138685).
 
 ---
 
