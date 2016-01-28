@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sedona Hotels</title>
+</head>
+<body>
+<header>
+  <div class="container">
+    <ul class="container_navigation">
+      <li><a href="#">Информация</a></li>
+      <li><a href="#">Фото и видео</a></li>
+      <li><a href="#"><img src="#" alt="Главная" width="" height=""></a>
+      <li><a href="#">Карта штата</a></li>
+      <li><a href="#">Гостиницы</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+<section class="search">
+  <div class="filter">
+    <div class="filter_structure">
+      <p class="filter_option">инфраструктура</p>
+      <input type="checkbox" name="swimming_pool" id="pool" checked>
+      <label for="pool">бассейн</label>
+      <input type="checkbox" name="parking_zone" id="parking">
+      <label for="parking">парковка</label>
+      <input type="checkbox" name="internet" id="wifi">
+      <label for="wifi">wi-fi</label>
+    </div>
+    <div class="filter_property">
+      <p class="filter_option">тип жилья</p>
+      <input type="checkbox" name="hotels" id="hotel">
+      <label for="hotel">гостиница</label>
+      <input type="checkbox" name="motels" id="motel">
+      <label for="motel">мотель</label>
+      <input type="checkbox" name="apartments" id="apartment">
+      <label for="apartment">апартаменты</label>
+    </div>
+  </div>
+  <div class="filter-price">
+    <p class="filter_option">стоимость в сутки (р):</p>
+    <div class="price_control">
+      <p class="price_from"><label for="price-from">от</label><input class="min-price" id="price-from" type="number" value="0" min="0" max="5000" pattern="[0-9]*"></p>
+      <p class="price_to"><label for="price-to">до</label><input class="max-price" id="price-to" type="number" value="3000" min="0" max="5000" pattern="[0-9]*"></p>
+  </div>
+    <div class="range_control">
+      <div class="scale"><div class="bar"></div></div>
+      <div class="toggle min_toggle"></div>
+      <div class="toggle max_toggle"></div>
+    </div>
+    <button value="filter_show">Показать</button>
+  </div>
+</section>
+<section class="results">
+  <div class="results_sorting">
+    <div class="sorting_text">
+      <p class="results_title">Найдено: <span class="quantity">3</span></p>
+      <p class="sorting_title">Сортировка:</p>
+      <ul class="sorting_links">
+        <li><a class="sorting_active disabled" href="#">По цене</a></li>
+        <li><a class="disabled" href="#">По типу</a></li>
+        <li><a class="disabled" href="#">По рейтингу</a></li>
+      </ul>
+    </div>
+    <div class="results_controls">
+      <a class="arrow ascending" href="#"></a>
+      <a class="arrow descending down_active" href="#"></a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="hash">#visitsedona</div>
+  <div class="social_buttons">
+    <a href="#" class="btn_social btn_social_tw"></a>
+    <a href="#" class="btn_social btn_social_fb"></a>
+    <a href="#" class="btn_social btn_social_yt"></a>
+  </div>
+  <div class="copyright">
+    Website by<a class="copyright_logo" href="#"><img src="#" width="" height=""></a>
+  </div>
+</footer>
+</body>
+</html>
