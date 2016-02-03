@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Olya Chetverikova](https://htmlacademy.ru/profile/id136685).
-* Наставник: [Андрей Гостюхин] (https://htmlacademy.ru/profile/id138685).
+* Наставник: [Никита Рогатнев] (https://htmlacademy.ru/profile/id86119).
 
 ---
 
