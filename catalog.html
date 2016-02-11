@@ -5,6 +5,7 @@
     <title>Sedona Hotels</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 </head>
 <body>
 <header class="container">
@@ -42,36 +43,42 @@
       </ul>
     </div><div
    class="filter_price">
-    <h2 class="filter_option">стоимость в сутки (р):</h2>
-    <div class="price_control">
-      <p class="price_from"><label for="price-from">от</label><input class="min-price" id="price-from" type="number" value="0" min="0" max="5000" pattern="[0-9]*"></p>
-      <p class="price_to"><label for="price-to">до</label><input class="max-price" id="price-to" type="number" value="3000" min="0" max="5000" pattern="[0-9]*"></p>
+    <div class="filter_range">
+      <div class="filter_title"><h2>стоимость в сутки (р):</h2></div>
+      <div class="price_control">
+        <label class="min_price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max_price">до <input type="text" name="max-price" value="3000"></label>
+      </div>
+      <div class="range_control">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="toggle min_toggle"
+        ></div>
+        <div class="toggle max_toggle"
+        ></div>
+      </div>
+      <button class="filter_show" type="submit">Показать</button>
     </div>
-    <div class="range_control">
-      <div class="scale"><div class="bar"></div></div>
-      <div class="toggle min_toggle"></div>
-      <div class="toggle max_toggle"></div>
-    </div>
-    <button value="filter_show" type="submit">Показать</button>
   </div>
   </div>
 </form>
 <section class="results">
   <div class="results_amount">
-      <p class="results_title">Найдено: <span class="quantity">3</span></p>
+      <span class="results_title">Найдено: <span class="quantity">3</span></span>
   </div><div
    class="sorting">
       <p class="sorting_title">Сортировка:</p>
       <ul class="sorting_links">
-        <li><a class="sorting_active disabled" href="#">По цене</a></li>
+        <li><a class="active" href="#">По цене</a></li>
         <li><a class="disabled" href="#">По типу</a></li>
         <li><a class="disabled" href="#">По рейтингу</a></li>
       </ul>
   </div><div
    class="results_controls">
     <ul>
-      <li><a class="arrow ascending" href="#">up</a></li>
-      <li><a class="arrow descending down_active" href="#">down</a></li>
+      <li><a class="icon-up-dir" href="#"></a></li>
+      <li><a class="icon-down-dir down_active" href="#"></a></li>
     </ul>
   </div>
 </section>
@@ -80,7 +87,7 @@
     <img src="img/hotel.jpg" alt="amara resort" width="135" height="90">
   </div><div
    class="item_description">
-    <a href="#" class="amara"><h1>Amara Resort &amp; spa</h1></a>
+    <a href="#" class="item_title"><h1>Amara Resort &amp; spa</h1></a>
     <div class="learn_more">
       <span>гостиница</span>
       <div class="details"><a href="#">Подробнее</a></div>
@@ -90,14 +97,17 @@
       <div class="book_now"><a href="#">забронировать</a></div>
     </div>
   </div><div
-   class="item_rating"><span>рейтинг 8,5</span></div>
+   class="item_rating">
+  <span class="icon-star"></span>
+  <span>рейтинг 8,5</span>
+</div>
 </article>
   <article class="item">
     <div class="item_image motel">
       <img src="img/motel.jpg" alt="desert quail inn" width="135" height="90">
     </div><div
      class="item_description">
-      <a href="#" class="desert"><h1>Desert Quail Inn</h1></a>
+      <a href="#" class="item_title"><h1>Desert Quail Inn</h1></a>
       <div class="learn_more">
         <span>мотель</span>
         <div class="details"><a href="#">Подробнее</a></div>
@@ -114,7 +124,7 @@
       <img src="img/apartment.jpg" alt="villas at poco diablo" width="135" height="90">
     </div><div
      class="item_description">
-      <a href="#" class="poco_diablo"><h1>Villas at Poco Diablo</h1></a>
+      <a href="#" class="item_title"><h1>Villas at Poco Diablo</h1></a>
       <div class="learn_more">
         <span>апартаменты</span>
         <div class="details"><a href="#">Подробнее</a></div>
@@ -128,14 +138,14 @@
   </article>
 </main>
 <footer class="internal_footer">
-  <div class="hash"><a href="#">#visitsedona</a></div><div
+  <div class="hash"><a href="#" class="hash_sedona">#visitsedona</a></div><div
    class="social_buttons">
-    <a href="#" class="btn_social btn_social_tw">tw</a>
-    <a href="#" class="btn_social btn_social_fb">fb</a>
-    <a href="#" class="btn_social btn_social_yt">yt</a>
+    <a href="#" class="btn_social icon-twitter"></a>
+    <a href="#" class="btn_social icon-facebook"></a>
+    <a href="#" class="btn_social icon-youtube"></a>
   </div><div
    class="copyright">
-    <p>Website by<a class="copyright_logo" href="#"><img src="img/logoacademy.png" width="113" height="39"></a></p>
+    <p class="copyright_text">Website by<a class="copyright_logo" href="#"><img src="img/logoacademy.png" width="113" height="39"></a></p>
   </div>
 </footer>
 </body>

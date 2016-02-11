@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
   <body>
   <header class="container">
@@ -98,27 +99,27 @@
       <form method="get" class="search_form" action="https://echo.htmlacademy.ru">
         <div class="form_title"><h2>Поиск гостиницы в Седоне</h2></div>
         <div class="form_content">
-          <label for="checkin">Дата заезда:</label>
-            <span class="date-span">
-              <input type="text" id="checkin" class="date-input" value="24 апреля 2015">
-              <label for="checkin" class="form_calendar"></label>
+          <label for="checkin" class="check_in">Дата заезда:</label>
+            <span class="date_span">
+              <input type="text" id="checkin" class="date_input" value="24 апреля 2015">
+              <label for="checkin" class="icon-calendar"></label>
             </span><br>
-          <label for="checkout">Дата выезда:</label>
-            <span>
-              <input type="text" id="checkout" class="date-input" value="4 июля 2015">
-              <label for="checkout" class="form_calendar"></label>
+          <label for="checkout" class="check_out">Дата выезда:</label>
+            <span class="date_span">
+              <input type="text" id="checkout" class="date_input" value="4 июля 2015">
+              <label for="checkout" class="icon-calendar"></label>
             </span><br>
-          <label for="adults">Взрослые:</label>
+          <label for="adults" class="adults">Взрослые:</label>
             <span class="form_input">
-              <a class="form_minus" href="#">Less</a>
+              <a class="form_minus" href="#"><span class="icon-minus"></span></a>
               <input class="people_number" id="adults" type="text" pattern="[0-9]*" value="2" min="0">
-              <a class="form_plus" href="#">More</a>
-            </span><br>
-          <label for="children">Дети:</label>
+              <a class="form_plus" href="#"><span class="icon-plus"></span></a>
+            </span>
+          <label for="children" class="children">Дети:</label>
             <span class="form_input">
-              <a class="form_minus" href="#">Less</a>
+              <a class="form_minus" href="#"><span class="icon-minus"></span></a>
               <input class="people_number" id="children" type="text" pattern="[0-9]*" value="0" min="0">
-              <a class="form_plus" href="#">More</a>
+              <a class="form_plus" href="#"><span class="icon-plus"></span></a>
             </span><br>
           <input type="submit" value="Найти" class="search_btn">
         </div>
@@ -126,15 +127,15 @@
     </section>
     <section class="map"><img src="img/map.jpg" width="1200" height="593"></section>
   </main>
-  <footer>
-    <div class="hash"><a href="#">#visitsedona</a></div><div
+  <footer class="main_footer">
+    <div class="hash"><a href="#" class="hash_sedona">#visitsedona</a></div><div
      class="social_buttons">
-      <a href="#" class="btn_social btn_social_tw">tw</a>
-      <a href="#" class="btn_social btn_social_fb">fb</a>
-      <a href="#" class="btn_social btn_social_yt">yt</a>
+      <a href="#" class="btn_social icon-twitter"></a>
+      <a href="#" class="btn_social icon-facebook"></a>
+      <a href="#" class="btn_social icon-youtube"></a>
     </div><div
      class="copyright">
-      <p>Website by<a class="copyright_logo" href="#"><img src="img/logoacademy.png" width="113" height="39"></a></p>
+      <p class="copyright_text">Website by<a class="copyright_logo" href="#"><img src="img/logoacademy.png" width="113" height="39"></a></p>
     </div>
   </footer>
   </body>

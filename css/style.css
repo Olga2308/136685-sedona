@@ -1,3 +1,44 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+  url("../fonts/symbols-sedona.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-calendar::before { content: "\e800"; } /* "" */
+.icon-plus::before { content: "\e801"; } /* "" */
+.icon-minus::before { content: "\e802"; } /* "" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
+
+
 body {
   background-color: #f2f2f2;
   margin: 0;
@@ -7,8 +48,6 @@ body {
   font-size: 14px;
   line-height: 26px;
 }
-
-
 
 .container_navigation,
 .welcome,
@@ -25,6 +64,7 @@ body {
 .container_navigation {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .container_navigation li{
@@ -46,7 +86,6 @@ li .logo {
   position: absolute;
   margin-top: -20px;
   padding-left: 50px;
-
 }
 
 .container,
@@ -65,7 +104,6 @@ footer {
 header li {
   display: inline;
 }
-
 
 main {
   width: 1200px;
@@ -96,7 +134,15 @@ main {
 .search {
   text-align: center;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 155px;
+  position: relative;
+}
+
+.search_form {
+  position: absolute;
+  top: 206px;
+  left: 315px;
+  background-color: #ffffff;
 }
 
 .blue {
@@ -141,7 +187,21 @@ main {
 h1 {
   font-size: 21px;
   font-weight: bold;
+  line-height: 26px;
   margin: 0;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.reason h2,
+.service h2,
+.form_title h2 {
+  font-size: 21px;
+  line-height: 21px;
 }
 
 h3 {
@@ -160,6 +220,61 @@ h3 {
 form {
   width: 567px;
   margin: 0 auto;
+  font-weight: bold;
+}
+
+.form_content {
+  padding: 55px;
+  text-align: left;
+}
+
+input.date_input {
+  border: none;
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  width: 290px;
+}
+
+.date_span {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.check_in,
+.check_out,
+.adults,
+.children {
+  display: inline-block;
+  width: 97px;
+}
+
+.icon-calendar {
+  color: #a9a9a9;
+}
+
+.form_input {
+  width: 113px;
+  border: none;
+  background-color: #f2f2f2;
+  margin-left: 15px;
+  padding: 10px;
+}
+
+.form_input input {
+  border: none;
+  width: 40px;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+
+.form_minus span,
+.form_plus span {
+  color: #a9a9a9;
+  font-size: 14px;
 }
 
 .search_btn {
@@ -173,10 +288,14 @@ form {
   font-size: 21px;
   font-weight: bold;
   text-align: center;
+  border: none;
+  margin-top: 50px;
 }
 
-.footer {
-  width: 1200px;
+.main_footer {
+  background-color: rgba(255,255,255,.9);
+  position: relative;
+  bottom: 80px;
 }
 
 .hash,
@@ -185,9 +304,19 @@ form {
   display: inline-block;
   width: 400px;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+.hash_sedona,
+.btn_social,
+.copyright_text,
+.item_title {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 
 }
+
 /* catalog.css*/
 
 /* фильтр*/
@@ -215,7 +344,7 @@ form {
   color: white;
   vertical-align: top;
   display: inline-block;
-  text-align: left;
+
 }
 
 .filter_structure,
@@ -223,9 +352,132 @@ form {
   width: 25%;
 }
 
+.filter_structure li,
+.filter_property li {
+  margin: 0;
+}
+
 .filter_price {
   width: 50%;
-  text-align: center;
+}
+
+.filter_range {
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: 210px;
+}
+
+.filter_title {
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price_control {
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  position: relative;
+}
+
+.price_control::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.price_control label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.price_control .min_price,
+.price_control .max_price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price_control input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.range_control {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range_control .scale {
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+}
+
+.range_control .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.toggle {
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 rgba(0,1,1,0.2);
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+}
+
+.toggle:hover {
+  background: #1c4f80;
+}
+
+.filter_show {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter_show:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.min_toggle {
+  left: 0;
+}
+
+.max_toggle {
+  left: 80%;
 }
 
 /*results*/
@@ -236,15 +488,30 @@ form {
 .sorting_links,
 .sorting_title {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+.results_amount {
+  margin-top: 13px;
 }
 
 .results_title {
+  font-size: 21px;
   font-weight: bold;
 }
 
 .sorting_links {
   list-style: none;
+}
+
+.active {
+  color: #81b3d2;
+}
+
+.disabled {
+  color: #cacaca;
+  text-decoration: dotted;
+  border-bottom: 2px dotted #81b3d2;
 }
 
 .results_amount,
@@ -263,9 +530,9 @@ form {
 
 .sorting_links a {
   display: block;
-  text-decoration: none;
   font-weight: bold;
-  padding-left: 32px;
+  margin-left: 32px;
+  text-decoration: none;
 }
 
 .results_amount,
@@ -280,7 +547,7 @@ form {
 .sorting,
 .item_description {
   width: 780px;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-bottom: 28px;
 }
 
@@ -291,10 +558,68 @@ form {
   padding-bottom: 28px;
 }
 
+.results_controls a {
+  text-decoration: none;
+  font-size: 23px;
+  color: #cccccc;
+}
+
+.results_controls .down_active {
+  color: #81b3d2;
+}
+
 .item,
 .results {
   border-bottom: 2px solid #e5e5e5;
   margin: 0;
 }
 
+.learn_more,
+.booking {
+  margin-top: 6px;
+}
 
+.details {
+  display: block;
+  background: #81b3d2;
+  padding: 3px 16px;
+  margin-top: 3px;
+}
+
+.book_now {
+  display: block;
+  background: #766357;
+  padding: 3px 16px;
+  margin-top: 3px;
+}
+
+.booking {
+  margin-left: 6px;
+}
+
+.details a,
+.book_now a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/*social buttons*/
+
+.btn_social {
+  display: inline-block;
+  width: 45px;
+  height: 35px;
+  background-color: #81b3d2;
+  margin: 6px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+.social_buttons a {
+  color: white;
+  font-size: 19px;
+  padding-top: 10px;
+}
