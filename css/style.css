@@ -95,8 +95,7 @@ footer {
 }
 
 .container ul,
-.sorting_links,
-.results_controls ul{
+.sorting_links {
   list-style: none;
   text-align: center;
 }
@@ -167,7 +166,7 @@ main {
   text-align: center;
   vertical-align: top;
   width: 400px;
-  padding: 58px 0;
+  padding: 60px 0;
   margin: 0;
 }
 
@@ -333,10 +332,6 @@ input.date_input {
   margin: 0 auto;
 }
 
-.search_place ul {
-  list-style: none;
-}
-
 .filter_structure,
 .filter_property,
 .filter_price {
@@ -344,7 +339,10 @@ input.date_input {
   color: white;
   vertical-align: top;
   display: inline-block;
+}
 
+.filter_option {
+  margin: 0;
 }
 
 .filter_structure,
@@ -352,9 +350,37 @@ input.date_input {
   width: 25%;
 }
 
-.filter_structure li,
-.filter_property li {
-  margin: 0;
+.filter_structure label,
+.filter_property label {
+  font-weight: normal;
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  margin-top: 25px;
+  line-height: 20px;
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: '\2610';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  font-family: "symbols-sedona";
+  font-size: 26px;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: '\2611';
 }
 
 .filter_price {
@@ -370,9 +396,14 @@ input.date_input {
 
 .filter_title {
   margin-bottom: 9px;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 16px;
   line-height: 21px;
+}
+
+.filter_title h2 {
+  padding: 0;
+  margin: 0;
 }
 
 .price_control {
@@ -484,11 +515,24 @@ input.date_input {
 
 .results_amount,
 .sorting,
-.results_controls,
 .sorting_links,
 .sorting_title {
   display: inline-block;
   vertical-align: middle;
+}
+
+.results_controls {
+  text-align: right;
+  padding-right: 72px;
+  width: 113px;
+  padding-top: 30px;
+  padding-bottom: 28px;
+}
+
+.results_controls a {
+  display: inline-block;
+  padding: 0;
+  margin-left: -15px;
 }
 
 .results_amount {
@@ -498,10 +542,6 @@ input.date_input {
 .results_title {
   font-size: 21px;
   font-weight: bold;
-}
-
-.sorting_links {
-  list-style: none;
 }
 
 .active {
@@ -517,7 +557,6 @@ input.date_input {
 .results_amount,
 .sorting_links li,
 .sorting,
-.results_controls li,
 .results_controls,
 .item_image,
 .item_description,
@@ -530,7 +569,6 @@ input.date_input {
 
 .sorting_links a {
   display: block;
-  font-weight: bold;
   margin-left: 32px;
   text-decoration: none;
 }
@@ -551,11 +589,12 @@ input.date_input {
   padding-bottom: 28px;
 }
 
-.results_controls,
 .item_rating {
-  width: 185px;
+  width: 113px;
   padding-top: 30px;
   padding-bottom: 28px;
+  padding-right: 72px;
+  text-align: right;
 }
 
 .results_controls a {
@@ -604,6 +643,21 @@ input.date_input {
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
+}
+
+.icon-star {
+  font-size: 19px;
+  line-height: 21px;
+  color: #81b3d2;
+  margin-left: -5px;
+}
+
+.rating_number {
+  display: block;
+  width: 80px;
+  background-color: #f2f2f2;
+  padding: 5px 15px;
+  margin-top: 30px;
 }
 
 /*social buttons*/
