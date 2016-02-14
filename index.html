@@ -6,6 +6,9 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!--og meta facebook
+    ga -->
+
   </head>
   <body>
   <header class="container">
@@ -20,8 +23,8 @@
   <main>
     <section class="welcome">
       <div class="welcome_image">
-        <div class="white_line"><!--<img src="img/white.png" alt="" width="1200" height="57">-->
-          <div class="welcome_notes"><!--<img src="img/welcome.png" alt="Sedona" width="458" height="352">--></div>
+        <div class="white_line">
+          <div class="welcome_notes"></div>
         </div>
       </div>
 
@@ -99,28 +102,16 @@
       <form method="get" class="search_form" action="https://echo.htmlacademy.ru">
         <div class="form_title"><h2>Поиск гостиницы в Седоне</h2></div>
         <div class="form_content">
-          <label for="checkin" class="check_in">Дата заезда:</label>
-            <span class="date_span">
-              <input type="text" id="checkin" class="date_input" value="24 апреля 2015">
-              <label for="checkin" class="icon-calendar"></label>
-            </span><br>
-          <label for="checkout" class="check_out">Дата выезда:</label>
-            <span class="date_span">
-              <input type="text" id="checkout" class="date_input" value="4 июля 2015">
-              <label for="checkout" class="icon-calendar"></label>
-            </span><br>
-          <label for="adults" class="adults">Взрослые:</label>
-            <span class="form_input">
-              <a class="form_minus" href="#"><span class="icon-minus"></span></a>
-              <input class="people_number" id="adults" type="text" pattern="[0-9]*" value="2" min="0">
-              <a class="form_plus" href="#"><span class="icon-plus"></span></a>
-            </span>
-          <label for="children" class="children">Дети:</label>
-            <span class="form_input">
-              <a class="form_minus" href="#"><span class="icon-minus"></span></a>
-              <input class="people_number" id="children" type="text" pattern="[0-9]*" value="0" min="0">
-              <a class="form_plus" href="#"><span class="icon-plus"></span></a>
-            </span><br>
+          <label class="check_in">Дата заезда:<input type="text" class="date_input" value="24 апреля 2015"></label>
+          <label class="check_out">Дата выезда:<input type="text" class="date_input" value="4 июля 2015"></label>
+          <div class="adults_amount">
+            <label for="adults" class="adults">Взрослые:</label>
+            <button class="icon_btn icon-minus"></button><input type="text" name="adults" id="adults" value="2"><button class="icon_btn icon-plus"></button>
+          </div><div
+           class="children_amount">
+            <label for="children" class="children">Дети:</label>
+            <button class="icon_btn icon-minus"></button><input type="text" name="children" id="children" value="0"><button class="icon_btn icon-plus"></button>
+          </div>
           <input type="submit" value="Найти" class="search_btn">
         </div>
       </form>

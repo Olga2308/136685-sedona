@@ -64,7 +64,7 @@ body {
 .container_navigation {
   margin: 0;
   padding: 0;
-  font-weight: bold;
+  font-weight: 100;
 }
 
 .container_navigation li{
@@ -80,6 +80,26 @@ body {
   font-weight: bold;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.container_navigation a:hover {
+  color: #81b3d2;
+}
+
+.container_navigation a:active {
+  color: #b2b2b2;
+}
+
+.container_navigation .active {
+  color: #766357;
+}
+
+.container_navigation .active:hover {
+  color: #604e43;
+}
+
+.container_navigation .active:active {
+  color: #dbd8d5;
 }
 
 li .logo {
@@ -227,53 +247,109 @@ form {
   text-align: left;
 }
 
-input.date_input {
-  border: none;
-  background-color: #f2f2f2;
+.date_input {
+  margin-bottom: 30px;
+  width: 322px;
+  padding: 10px 10px;
   text-transform: uppercase;
-  margin-bottom: 28px;
-  width: 290px;
-}
-
-.date_span {
+  margin-left: 20px;
+  border: none;
   background-color: #f2f2f2;
-  padding: 10px;
-  margin-left: 15px;
 }
 
-.check_in,
-.check_out,
-.adults,
-.children {
-  display: inline-block;
-  width: 97px;
+.date_input:hover {
+  background-color: #ebebeb;
 }
 
-.icon-calendar {
+.date_input:active {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  width: 318px;
+}
+
+.check_out .date_input {
+  margin-left: 16px;
+}
+
+
+.check_in::after {
+  content: '\e800';
+  font-family: "symbols-sedona";
+  font-size: 21px;
+  line-height: 26px;
+  position: absolute;
   color: #a9a9a9;
+  top: 187px;
+  left: 472px;
+  cursor: pointer;
+}
+.check_out::after {
+  content: '\e800';
+  font-family: "symbols-sedona";
+  font-size: 21px;
+  line-height: 26px;
+  position: absolute;
+  top: 252px;
+  left: 472px;
+  color: #a9a9a9;
+  cursor: pointer;
 }
 
-.form_input {
-  width: 113px;
-  border: none;
-  background-color: #f2f2f2;
-  margin-left: 15px;
-  padding: 10px;
+.check_in:hover::after,
+.check_out:hover::after {
+  color: #000000;
 }
 
-.form_input input {
-  border: none;
-  width: 40px;
-  background-color: #f2f2f2;
+.check_in:active::after,
+.check_out:active::after {
+  color: #81b3d2;
+}
+
+.adults_amount,
+.children_amount {
+  display: inline-block;
+
+}
+
+.adults_amount input,
+.children_amount input {
+  width: 34px;
   text-align: center;
-  margin-bottom: 28px;
+  border: none;
+  margin: 0;
+  background-color: #f2f2f2;
+  padding: 9px 0px;
 }
 
+.children_amount {
+  margin-left: 53px;
+}
 
-.form_minus span,
-.form_plus span {
+.adults {
+  margin-right: 35px;
+}
+
+.children {
+  margin-right: 25px;
+}
+
+.icon_btn {
+  border: none;
+  margin: 0;
+  background-color: #f2f2f2;
   color: #a9a9a9;
   font-size: 14px;
+  line-height: 26px;
+  padding: 5px 10px;
+}
+
+.icon_btn:hover {
+  color: #000000;
+}
+
+.icon_btn:active {
+  color: #81b3d2;
+  border: none;  
 }
 
 .search_btn {
@@ -291,10 +367,23 @@ input.date_input {
   margin-top: 50px;
 }
 
+.search_btn:hover,
+.search_btn:active {
+  background-color: #669ec0;
+}
+
+.search_btn:active {
+  color: #88b6d1;
+}
+
+footer {
+  padding: 20px 0;
+}
+
 .main_footer {
   background-color: rgba(255,255,255,.9);
   position: relative;
-  bottom: 80px;
+  bottom: 102px;
 }
 
 .hash,
@@ -308,14 +397,25 @@ input.date_input {
 
 .hash_sedona,
 .btn_social,
-.copyright_text,
 .item_title {
   color: black;
   text-decoration: none;
   font-weight: bold;
-
 }
 
+.copyright_text {
+  color: #000000;
+  font-weight: normal;
+  position: relative;
+  padding-right: 130px;
+}
+
+.copyright_logo {
+  margin-left: 7px;
+  position: absolute;
+  top: -5px;
+  right: 103px;
+}
 /* catalog.css*/
 
 /* фильтр*/
@@ -496,6 +596,12 @@ input[type="checkbox"]:checked + label::before {
   border-radius: 2px;
   outline: none;
   cursor: pointer;
+  font-weight: normal;
+}
+
+.filter_show:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .filter_show:hover {
@@ -533,6 +639,17 @@ input[type="checkbox"]:checked + label::before {
   display: inline-block;
   padding: 0;
   margin-left: -15px;
+  text-decoration: none;
+  font-size: 23px;
+  color: #cccccc;
+}
+
+.results_controls .down_active {
+  color: #81b3d2;
+}
+
+.results_controls a:hover {
+  color: #000000;
 }
 
 .results_amount {
@@ -544,14 +661,23 @@ input[type="checkbox"]:checked + label::before {
   font-weight: bold;
 }
 
-.active {
+.sorting_links a:hover {
   color: #81b3d2;
 }
 
-.disabled {
+.sorting_links a:active {
+  color: #000000;
+}
+
+.sorting_links .active {
+  color: #81b3d2;
+}
+
+.sorting_links .disabled {
   color: #cacaca;
   text-decoration: dotted;
   border-bottom: 2px dotted #81b3d2;
+
 }
 
 .results_amount,
@@ -571,6 +697,7 @@ input[type="checkbox"]:checked + label::before {
   display: block;
   margin-left: 32px;
   text-decoration: none;
+  padding: 0;
 }
 
 .results_amount,
@@ -597,16 +724,6 @@ input[type="checkbox"]:checked + label::before {
   text-align: right;
 }
 
-.results_controls a {
-  text-decoration: none;
-  font-size: 23px;
-  color: #cccccc;
-}
-
-.results_controls .down_active {
-  color: #81b3d2;
-}
-
 .item,
 .results {
   border-bottom: 2px solid #e5e5e5;
@@ -618,22 +735,12 @@ input[type="checkbox"]:checked + label::before {
   margin-top: 6px;
 }
 
-.details {
-  display: block;
-  background: #81b3d2;
-  padding: 3px 16px;
-  margin-top: 3px;
+.item_title:hover {
+  color: #81b3d2;
 }
 
-.book_now {
-  display: block;
-  background: #766357;
-  padding: 3px 16px;
-  margin-top: 3px;
-}
-
-.booking {
-  margin-left: 6px;
+.item_title:active {
+  color: #cacaca;
 }
 
 .details a,
@@ -643,6 +750,45 @@ input[type="checkbox"]:checked + label::before {
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
+}
+
+.booking {
+  margin-left: 6px;
+}
+
+.details {
+  display: block;
+  background: #81b3d2;
+  padding: 3px 16px;
+  margin-top: 3px;
+}
+
+.details:hover {
+  background-color: #669ec0;
+}
+
+.details:active {
+  background-color: #669ec0;
+}
+
+.details a:active {
+  color: #85b0cd;
+}
+
+.book_now {
+  display: block;
+  background: #766357;
+  padding: 3px 16px;
+  margin-top: 3px;
+}
+
+.book_now:hover,
+.book_now:active {
+  background-color: #604e43;
+}
+
+.book_now a:active {
+  color: #857871;
 }
 
 .icon-star {
@@ -676,4 +822,13 @@ input[type="checkbox"]:checked + label::before {
   color: white;
   font-size: 19px;
   padding-top: 10px;
+}
+
+.btn_social:hover,
+.btn_social:active {
+  background-color: #669ec0;
+}
+
+.btn_social:active {
+  color: #88b6d1;
 }
